@@ -1,11 +1,8 @@
 //闭包的应用
 //斐波拉契数列
-//为函数实现接口
+//TODO 还是很不理解  为函数实现接口
+//使用函数来遍历二叉树
 package main
-
-import (
-	"fmt"
-)
 
 // //斐波拉契数列的生成器
 // //1 1 2 3 5 8 13 21 34
@@ -31,23 +28,43 @@ import (
 // 	fmt.Println(f()) //8
 // }
 
-type adder func() int
+//TODO 还是很不离家为函数实现接口
+// type fib func() int
 
-func fibonacci() adder {
-	a, b := 0, 1
-	return func() int {
-		a, b = b, a+b
-		return a
-	}
-}
-
-// func ()  {
-
+// func fibonacci() fib {
+// 	a, b := 0, 1
+// 	return func() int {
+// 		a, b = b, a+b
+// 		return a
+// 	}
 // }
+
+// //实现Read接口
+// func (f fib) Read(p []byte) (n int, err error) {
+// 	next := f()
+// 	if next > 10000 {
+// 		return 0, io.EOF
+// 	}
+// 	s := fmt.Sprintf("%d\n", next)
+
+// 	//TODO: incorrect if p is too small
+// 	return strings.NewReader(s).Read(p)
+// }
+
+// func printFileContents(reader io.Reader) {
+// 	scanner := bufio.NewScanner(reader)
+// 	for scanner.Scan() {
+// 		fmt.Println(scanner.Text())
+// 	}
+// }
+
+// func main() {
+// 	f := fibonacci()
+// 	printFileContents(f)
+// }
+
+//使用函数来遍历二叉树
+
 func main() {
-	f := fibonacci()
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
-	fmt.Println(f())
+
 }
